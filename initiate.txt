@@ -1,0 +1,12 @@
+yarn add express mongoose body-parser babel-cli babel-preset-env concurrently
+//add scripts to pkg.json
+  "scripts": {
+    "start": "nodemon server.js --exec babel-node",
+    "concurrent_eg": "concurrently \"yarn start:server\" \"yarn start:client_yarn\""
+  },
+touch .babelrc
+//and add
+{
+    "presets": ["env"],
+    "plugins": []
+}
