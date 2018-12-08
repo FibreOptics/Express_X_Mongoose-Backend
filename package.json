@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon server.js --exec babel-node",
-    "concurrent_eg": "concurrently \"yarn start:server\" \"yarn start:client_yarn\""
+    "concurrent_eg": "concurrently \"yarn start:server\" \"yarn start:client_yarn\"",
+    "heroku-postbuild": "cd client && yarn start"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",

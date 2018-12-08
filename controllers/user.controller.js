@@ -76,3 +76,19 @@ exports.user_delete = function (req, res) {
         res.json('Deleted successfully!');
     })
 };
+//get friends
+exports.friends = (req, res) => {
+    console.log(req.params);
+    User.find({email:req.params.email},'friends',(err,friends) => {
+        console.log(friends);
+        res.json(friends);
+        /* returns
+        {
+            "friends": [
+                "test1@serve.com",
+                "test2@serve.com"
+            ],
+            "_id": "5c03e1b452a74f54783867e0"
+        }*/
+    })
+};
